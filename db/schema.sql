@@ -10,6 +10,5 @@ CREATE TABLE paintings (
   price numeric, 
   size TEXT,
   is_available Boolean,
-  description TEXT,
-  image TEXT DEFAULT 'https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image'
+  image TEXT DEFAULT 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf--WupN13x5KLdwkdCHKDOu37AYkESd5tvcYrIGcm5SSMs4rSbmF2W2DNUTa12SYF-yU&usqp=CAU'
 )

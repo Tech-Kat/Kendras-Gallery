@@ -6,4 +6,9 @@ const checkName = (req, res, next) => {
     }
   };
 
+// const checkAvailable = (req, res, next) => {
+//     if(req.body)
+// }
+
+
   module.exports = {checkName};

@@ -22,12 +22,11 @@ const getPainting = async (id) => {
 };
 
 const createPainting = async (painting) => {
-  const { name, artist, price, size, description, is_available, image } =
-    painting;
+  const { name, artist, price, size, is_available, image } = painting;
   try {
     const newPainting = await db.oneOrNone(
-      "INSERT INTO paintings (name, artist, price, size, description, is_available, image) VALUES(INITCAP($1), INITCAP($2), $3, $4, $5, $6, $7) RETURNING *",
-      [name, artist, price, size, description, is_available, image]
+      "INSERT INTO paintings (name, artist, price, size, is_available, image) VALUES(INITCAP($1), INITCAP($2), $3, $4, $5, $6) RETURNING *",
+      [name, artist, price, size, is_available, image]
     );
     return newPainting;
   } catch (error) {
@@ -36,27 +35,28 @@ const createPainting = async (painting) => {
 };
 
 const deletePainting = async (id) => {
-    try{
-        const deletedPainting = await db.one(
-            "DELETE FROM paintings WHERE id = $1 RETURNING *", id
-        );
-        return deletedPainting;
-    } catch (error) {
-        return error;
-    }
+  try {
+    const deletedPainting = await db.one(
+      "DELETE FROM paintings WHERE id = $1 RETURNING *",
+      id
+    );
+    return deletedPainting;
+  } catch (error) {
+    return error;
+  }
 };
 
 const updatePainting = async (id, painting) => {
-    try {
-        const {name, artist, price, size, description, is_available, image} = painting;
-        const updatedPainting = await db.one( 
-            "UPDATE paintings SET name=INITCAP($1), artist=INITCAP($2), price=$3, size=$4, description=$5, is_available=$6 image=$7 WHERE id=$8 RETURNING *",
-            [name, artist, price, size, description, is_available, image, id]
-        );
-        return updatedPainting;
-    } catch (error) {
-        return error;
-    }
+  const { name, artist, price, size, is_available, image } = painting;
+  try {
+    const updatedPainting = await db.one(
+      "UPDATE paintings SET name=INITCAP($1), artist=INITCAP($2), price=$3, size=$4, is_available=$5, image=$6 WHERE id=$7 RETURNING *",
+      [name, artist, price, size, is_available, image, id]
+    );
+    return updatedPainting;
+  } catch (error) {
+    return error;
+  }
 };
 
 module.exports = {
@@ -64,5 +64,5 @@ module.exports = {
   getPainting,
   createPainting,
   deletePainting,
-  updatePainting
+  updatePainting,
 };

@@ -34,7 +34,7 @@ paintings.get("/:id", async (req, res) => {
 });
 
 //CREATE
-paintings.post("/", checkName, async (req, res) => {
+paintings.post("/", async (req, res) => {
   if (!req.body.image) {
     req.body.image =
       "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image";
@@ -56,7 +56,7 @@ paintings.post("/", checkName, async (req, res) => {
 });
 
 //Update
-paintings.put("/", checkName, async (req, res) => {
+paintings.put("/:id", async (req, res) => {
   const { id } = req.params;
 
   if (!req.body.image) {
@@ -69,10 +69,13 @@ paintings.put("/", checkName, async (req, res) => {
   if (!req.body.price) {
     req.body.price = 0;
   }
-
-  const updatedPainting = await updatePainting(id, req.body);
-
-  res.status(400).json(updatedPainting);
+  try {
+    const updatedPainting = await updatePainting(id, req.body);
+    res.json(updatedPainting);
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({ error });
+  }
 });
 
 //Delete
