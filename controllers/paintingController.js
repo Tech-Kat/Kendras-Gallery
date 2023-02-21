@@ -9,12 +9,12 @@ const {
   updatePainting,
   deletePainting,
 } = require("../queries/painting");
-const { checkName } = require("../Validation.js/checkPainting");
+const { checkName } = require("../unused/checkPainting");
 
 //INDEX
 paintings.get("/", async (req, res) => {
   const allPaintings = await getAllPaintings();
-  console.log(allPaintings);
+
   if (allPaintings[0]) {
     res.status(200).json(allPaintings);
   } else {
@@ -50,7 +50,6 @@ paintings.post("/", async (req, res) => {
     const painting = await createPainting(req.body);
     res.json(painting);
   } catch (error) {
-    console.log(error);
     res.status(400).json({ error });
   }
 });
@@ -73,7 +72,6 @@ paintings.put("/:id", async (req, res) => {
     const updatedPainting = await updatePainting(id, req.body);
     res.json(updatedPainting);
   } catch (error) {
-    console.log(error);
     res.status(400).json({ error });
   }
 });
