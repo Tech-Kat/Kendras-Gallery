@@ -4,7 +4,7 @@ INSERT INTO paintings (name, artist, price, size, is_available, image) VALUES
 ('Blue Harmony', 'Kendra Pelle', 200, '24 x 12in', False, 'https://i.postimg.cc/wxSpJKds/6-C8-C2233-A2-DE-4114-8933-85-FDFC836628.jpg'),
 ('Red', 'Kendra Pelle', 200, '24 x 12in', True,'https://i.postimg.cc/bYGw2G0X/63091523411-3-D2-F41-F2-CC70-42-CE-A335-A112-AB0-F51-B0.jpg'),
 ('Blue Seas', 'Kendra Pelle', 200, '24 x 12in', False, 'https://i.postimg.cc/fb3rvh8b/F840-CC34-47-EB-441-C-8-E03-BD6-F517-D8311.jpg'),
-('Blue Harmony', 'Kendra Pelle', 200, '24 x 12in', False,  '84346761-826E-4C71-9D43-C10382C791C5_1_105_c.jpeg'),
+('Tree Painting', 'Craftwhack', 250, '24 x 12in', True,  'https://craftwhack.com/wp-content/uploads/2022/04/Tree-Painting-Ideas.jpg'),
 ('Blue And Gold Lagoon', 'CrystalCoast', 61.01, '8 x 9.8in', False, 'https://ih1.redbubble.net/image.2668537354.7762/fcp,small,wall_texture,product,750x1000.jpg'),
 ('Flower Wisp', 'Gina Deluca', 80, '10 x 10in', False, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZIAE8yhLgikq4aKoGA2-Vey8UiCsPc2F2OQ&usqp=CAU'),
 ('Take It Away', 'Sally Trace', 599.00, '24 x 36in', False, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm72LO_-jZ85rnpflw1Bv5cGHqXD8S2qa2Gg&usqp=CAU'),
@@ -20,4 +20,6 @@ INSERT INTO paintings (name, artist, price, size, is_available, image) VALUES
 ('Purple Rain', 'Studio Sweet T', 75, '10 x 20', False, 'https://cdn.shopify.com/s/files/1/0523/3659/1026/products/il_fullxfull.2420194981_lt1v_1024x1024.jpg?v=1609215512'),
 ('Abstract', 'Jon Anders Wiken', 150, '26.5 x 17.7', True, 'https://thumbs.dreamstime.com/b/acrylic-paint-pouring-canvas-lots-cells-creative-colors-texture-design-pattern-wallpaper-background-art-concept-172954347.jpg'),
 ('Mystical Tree', 'Helen Janow Miqueo', 310, '20 x 24in', False, 'https://i.postimg.cc/sDk2DF0c/32186830507-a54d239ce7-c.jpg'),
-('Dreamer Painting', 'En Chuen Soo', 1060, '30 x 40in', True, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrByCAIq2koFmohicMe54PYnM32aRw9uXIwQ&usqp=CAU');
+('Dreamer Painting', 'En Chuen Soo', 1060, '30 x 40in', True, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrByCAIq2koFmohicMe54PYnM32aRw9uXIwQ&usqp=CAU'),
+('Pour Painting', 'Etsy', 790, '30 x 40in', True, 'https://www.etsy.com/img/36841525/r/il/395429/4134884183/il_fullxfull.4134884183_ah9b.jpg'), 
+('Ocean Wave', 'Fluid', 350, '20 x 24in', False, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-3Ad5Cs-kTLiWPWURrnJyYGEqDp1DHRODvQ&usqp=CAU');
